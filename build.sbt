@@ -27,10 +27,7 @@ lazy val dev = project
       "react" -> "16.8.6",
       "react-dom" -> "16.8.6",
       "styled-components" -> "3.4.10",
-
-      // Atlaskit
-      "@atlaskit/button" -> "13.0.6"
-    ),
+    ) ++ Dependencies.atlaskit
   )
   .dependsOn(core)
   .aggregate(core)

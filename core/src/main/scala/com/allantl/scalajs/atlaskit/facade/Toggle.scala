@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation.JSImport
 object Toggle {
 
   def apply(
-      size: ToggleSize,
-      isChecked: Boolean,
-      onChange: js.UndefOr[Callback]
-  ): WithProps = RawToggle(size.value, isChecked, onChange)
+      size: ToggleSize = ToggleSize.Regular,
+      isDefaultChecked: Boolean = false,
+      onChange: js.UndefOr[Callback] = js.undefined
+  ): WithProps = RawToggle(size.value, isDefaultChecked, onChange)
 
   sealed trait ToggleSize extends ValueEntry.LowerCase
   object ToggleSize {
@@ -32,7 +32,7 @@ object RawToggle extends ReactBridgeComponent {
       onChange: js.UndefOr[Callback]
   ): WithProps = auto
 
-  @JSImport("@atlaskit/toggle", "ToggleStateless")
+  @JSImport("@atlaskit/toggle", JSImport.Default)
   @js.native
   object RawComponent extends js.Object
 }

@@ -5,13 +5,13 @@ import com.payalabs.scalajs.react.bridge.{ReactBridgeComponentNoSpecialProps, Wi
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 
-object ButtonGroup extends ReactBridgeComponentNoSpecialProps {
+object Page extends ReactBridgeComponentNoSpecialProps {
 
   override lazy val componentValue = RawComponent
 
   def apply(): WithProps = auto
 
-  @JSImport("@atlaskit/button", "ButtonGroup")
+  @JSImport("@atlaskit/page", JSImport.Default)
   @js.native
   object RawComponent extends js.Object
 }
