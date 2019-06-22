@@ -14,7 +14,10 @@ object App {
     PageExample.component,
     PageHeaderExample.component,
     TabsExample.component,
-    SelectExample.component
+    SelectExample.component,
+    TextFieldExample.component,
+    InlineEditableTextFieldExample.component,
+    MultiSelectExample.component
   )
 
   def main(args: Array[String]): Unit = {
