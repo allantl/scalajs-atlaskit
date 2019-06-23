@@ -1,6 +1,6 @@
 package com.allantl.scalajs.atlaskit.facade
 
-import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
 import japgolly.scalajs.react.{Callback, ReactEventFromInput}
 
 import scala.scalajs.js
@@ -27,7 +27,7 @@ object TextField {
       isReadOnly: js.UndefOr[Boolean] = false,
       autoFocus: js.UndefOr[Boolean] = js.undefined,
       onChange: js.UndefOr[Option[String] => Callback] = js.undefined,
-  ): WithProps =
+  ): WithPropsNoChildren =
     RawTextField(
       defaultValue,
       value,
@@ -55,7 +55,7 @@ private object RawTextField extends ReactBridgeComponent {
       isReadOnly: js.UndefOr[Boolean] = false,
       autoFocus: js.UndefOr[Boolean] = js.undefined,
       onChange: js.UndefOr[ReactEventFromInput => Callback] = js.undefined,
-  ): WithProps = auto
+  ): WithPropsNoChildren = autoNoChildren
 
   @JSImport("@atlaskit/textfield", JSImport.Default)
   @js.native

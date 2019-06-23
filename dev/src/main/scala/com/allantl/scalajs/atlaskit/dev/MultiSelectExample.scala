@@ -23,6 +23,5 @@ object MultiSelectExample {
       options = options,
       onChange = (o: js.Array[MultiSelectOption]) => Callback(println(o.map(_.value).toSeq)),
       value = Seq(o1)
-    )()
-
+    )
 }

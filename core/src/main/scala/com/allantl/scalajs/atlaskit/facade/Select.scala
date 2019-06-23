@@ -1,6 +1,6 @@
 package com.allantl.scalajs.atlaskit.facade
 
-import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
 import japgolly.scalajs.react.Callback
 
 import scala.scalajs.js
@@ -22,7 +22,7 @@ object Select extends ReactBridgeComponent {
       value: js.UndefOr[SelectOption] = js.undefined,
       onChange: js.UndefOr[SelectOption => Callback] = js.undefined,
       isDisabled: js.UndefOr[Boolean] = js.undefined
-  ): WithProps = auto
+  ): WithPropsNoChildren = autoNoChildren
 
   @js.native
   trait SelectOption extends js.Object {

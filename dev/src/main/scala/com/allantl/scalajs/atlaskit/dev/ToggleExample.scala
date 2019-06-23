@@ -7,6 +7,6 @@ import japgolly.scalajs.react.vdom.html_<^._
 object ToggleExample {
 
   val component: VdomElement =
-    Toggle(onChange = Callback(println("Toggled")))()
+    Toggle(onChange = Callback(println("Toggled")))
 
 }

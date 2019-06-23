@@ -1,6 +1,6 @@
 package com.allantl.scalajs.atlaskit.facade
 
-import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
 import japgolly.scalajs.react.Callback
 
 import scala.scalajs.js
@@ -20,7 +20,7 @@ object InlineEditableTextField extends ReactBridgeComponent {
       placeHolder: js.UndefOr[String] = js.undefined,
       readViewFitContainerWidth: js.UndefOr[Boolean] = js.undefined,
       onConfirm: js.UndefOr[Option[String] => Callback] = js.undefined,
-  ): WithProps = RawInlineEditableTextField(
+  ): WithPropsNoChildren = RawInlineEditableTextField(
     defaultValue,
     label,
     placeHolder,
@@ -39,7 +39,7 @@ private object RawInlineEditableTextField extends ReactBridgeComponent {
       placeHolder: js.UndefOr[String] = js.undefined,
       readViewFitContainerWidth: js.UndefOr[Boolean] = js.undefined,
       onConfirm: js.UndefOr[String => Callback] = js.undefined,
-  ): WithProps = auto
+  ): WithPropsNoChildren = autoNoChildren
 
   @JSImport("@atlaskit/inline-edit", "InlineEditableTextfield")
   @js.native

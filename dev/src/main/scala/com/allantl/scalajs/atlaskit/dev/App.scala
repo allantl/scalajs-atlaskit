@@ -17,7 +17,9 @@ object App {
     SelectExample.component,
     TextFieldExample.component,
     InlineEditableTextFieldExample.component,
-    MultiSelectExample.component
+    MultiSelectExample.component,
+    AsyncSelectExample.component,
+    AsyncMultiSelectExample.component
   )
 
   def main(args: Array[String]): Unit = {

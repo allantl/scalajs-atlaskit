@@ -1,6 +1,6 @@
 package com.allantl.scalajs.atlaskit.facade
 
-import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
 import japgolly.scalajs.react.Callback
 import japgolly.scalajs.react.raw.React
 import japgolly.scalajs.react.vdom.VdomElement
@@ -22,7 +22,7 @@ object Tabs extends ReactBridgeComponent {
   def apply(
       tabs: Seq[Tab],
       onSelect: js.UndefOr[(Tab, Int) => Callback] = js.undefined
-  ): WithProps = auto
+  ): WithPropsNoChildren = autoNoChildren
 
   @js.native
   sealed trait Tab extends js.Object {

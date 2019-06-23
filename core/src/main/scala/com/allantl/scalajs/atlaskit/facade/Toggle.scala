@@ -1,7 +1,7 @@
 package com.allantl.scalajs.atlaskit.facade
 
 import com.allantl.value.entry.ValueEntry
-import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
 import japgolly.scalajs.react.Callback
 
 import scala.scalajs.js
@@ -13,7 +13,7 @@ object Toggle {
       size: ToggleSize = ToggleSize.Regular,
       isDefaultChecked: Boolean = false,
       onChange: js.UndefOr[Callback] = js.undefined
-  ): WithProps = RawToggle(size.value, isDefaultChecked, onChange)
+  ): WithPropsNoChildren = RawToggle(size.value, isDefaultChecked, onChange)
 
   sealed trait ToggleSize extends ValueEntry.LowerCase
   object ToggleSize {
@@ -30,7 +30,7 @@ object RawToggle extends ReactBridgeComponent {
       size: String,
       isChecked: Boolean,
       onChange: js.UndefOr[Callback]
-  ): WithProps = auto
+  ): WithPropsNoChildren = autoNoChildren
 
   @JSImport("@atlaskit/toggle", JSImport.Default)
   @js.native

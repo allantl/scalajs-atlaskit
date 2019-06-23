@@ -1,6 +1,6 @@
 package com.allantl.scalajs.atlaskit.facade
 
-import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
 import japgolly.scalajs.react.Callback
 
 import scala.scalajs.js
@@ -12,7 +12,7 @@ object DatePicker extends ReactBridgeComponent {
 
   def apply(
       onChange: js.UndefOr[String => Callback] = js.undefined
-  ): WithProps = auto
+  ): WithPropsNoChildren = autoNoChildren
 
   @JSImport("@atlaskit/datetime-picker", "DatePicker")
   @js.native

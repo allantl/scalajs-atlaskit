@@ -1,7 +1,7 @@
 package com.allantl.scalajs.atlaskit.facade
 
 import com.allantl.scalajs.atlaskit.facade.MultiSelect.MultiSelectOption
-import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import com.payalabs.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
 import japgolly.scalajs.react.Callback
 
 import scala.scalajs.js
@@ -15,7 +15,7 @@ object MultiSelect {
       onChange: js.UndefOr[js.Array[MultiSelectOption] => Callback] = js.undefined,
       value: js.UndefOr[Seq[MultiSelectOption]] = js.undefined,
       isDisabled: js.UndefOr[Boolean] = js.undefined,
-  ): WithProps = RawMultiSelect(
+  ): WithPropsNoChildren = RawMultiSelect(
     options,
     placeholder,
     onChange,
@@ -51,7 +51,7 @@ private object RawMultiSelect extends ReactBridgeComponent {
       value: js.UndefOr[Seq[MultiSelectOption]] = js.undefined,
       isDisabled: js.UndefOr[Boolean] = js.undefined,
       isMulti: Boolean = true
-  ): WithProps = auto
+  ): WithPropsNoChildren = autoNoChildren
 
   @JSImport("@atlaskit/select", JSImport.Default)
   @js.native

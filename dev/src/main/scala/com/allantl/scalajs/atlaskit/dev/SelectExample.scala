@@ -17,5 +17,5 @@ object SelectExample {
     Select(
       options,
       onChange = (opt: Select.SelectOption) => Callback(println(opt.value))
-    )()
+    )
 }

@@ -17,7 +17,7 @@ object InlineEditableTextFieldExample {
           defaultValue = s.value,
           onConfirm = (value: Option[String]) =>
             Callback(println(value)) >> $.setState(State(value.getOrElse("")))
-        )()
+        )
       )
       .build
 

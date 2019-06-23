@@ -7,6 +7,6 @@ import japgolly.scalajs.react.vdom.html_<^._
 object DatePickerExample {
 
   val component: VdomElement =
-    DatePicker((date: String) => Callback(println(date)))()
+    DatePicker((date: String) => Callback(println(date)))
 
 }
