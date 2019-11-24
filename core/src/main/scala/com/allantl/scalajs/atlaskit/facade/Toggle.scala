@@ -22,13 +22,13 @@ object Toggle {
   }
 }
 
-object RawToggle extends ReactBridgeComponent {
+private object RawToggle extends ReactBridgeComponent {
 
   override lazy val componentValue = RawComponent
 
   def apply(
       size: String,
-      isChecked: Boolean,
+      isDefaultChecked: Boolean,
       onChange: js.UndefOr[Callback]
   ): WithPropsNoChildren = autoNoChildren
 

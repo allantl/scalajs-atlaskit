@@ -14,9 +14,11 @@ object InlineEditableTextFieldExample {
       .initialState(State("Hello"))
       .renderS(($, s) =>
         InlineEditableTextField(
-          defaultValue = s.value,
+          defaultValue = "Default",
+          isRequired = true,
           onConfirm = (value: Option[String]) =>
-            Callback(println(value)) >> $.setState(State(value.getOrElse("")))
+            Callback(println(value)) >> $.setState(State(value.getOrElse(""))),
+          startWithEditViewOpen = true
         )
       )
       .build

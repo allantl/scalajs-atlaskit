@@ -9,7 +9,7 @@ object Dependencies {
     "@atlaskit/page-header" -> "9.0.1",
     "@atlaskit/tabs" -> "10.0.3",
     "@atlaskit/select" -> "9.1.6",
-    "@atlaskit/inline-edit" -> "10.0.2",
+    "@atlaskit/inline-edit" -> "10.0.24",
     "@atlaskit/textfield" -> "2.0.1"
   )
 
